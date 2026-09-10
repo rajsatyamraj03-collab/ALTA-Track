@@ -1,0 +1,20 @@
+153.find min in rotate array 
+
+class Solution {
+public:
+    int findMin(vector<int>& nums) {
+        int i=0,r=nums.size()-1,mid;
+        while(i<r){
+            mid=(i+r)/2;
+            if(nums[mid]<nums[r]){
+                r=mid;
+
+            }
+            else{
+                i=mid+1;
+
+            }
+        }
+        return nums[i];
+    }
+};
