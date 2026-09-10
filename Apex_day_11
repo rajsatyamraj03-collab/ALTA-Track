@@ -1,0 +1,16 @@
+55. Jump Game
+
+class Solution {
+public:
+    bool canJump(vector<int>& nums) {
+        int curr=0;
+        int i=0;
+        while(i<=curr){
+            if(curr>=nums.size()-1)
+            return true;
+            curr=max(curr,i+nums[i]);
+            i+=1;
+        }
+        return false;
+    }
+};
